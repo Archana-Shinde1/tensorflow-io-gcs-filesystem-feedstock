@@ -1,0 +1,25 @@
+From c1a7cf481912eed05c08d261560dd750fa809c8b Mon Sep 17 00:00:00 2001
+From: Aman Surkar <Aman.Surkar@ibm.com>
+Date: Tue, 20 Aug 2024 06:45:43 +0000
+Subject: [PATCH] Set HAVE_DECL_SYS_SIGLIST to zero
+
+---
+ third_party/libapr1.patch | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/third_party/libapr1.patch b/third_party/libapr1.patch
+index 79e575af..1da5658e 100644
+--- a/third_party/libapr1.patch
++++ b/third_party/libapr1.patch
+@@ -839,7 +839,7 @@ diff -urN libapr1/include/arch/unix/apr_private.h libapr/include/arch/unix/apr_p
+ +
+ +/* Define to 1 if you have the declaration of `sys_siglist', and to 0 if you
+ +   don't. */
+-+#define HAVE_DECL_SYS_SIGLIST 1
+++#define HAVE_DECL_SYS_SIGLIST 0
+ +
+ +/* Define to 1 if you have the <dirent.h> header file. */
+ +#define HAVE_DIRENT_H 1
+-- 
+2.40.1
+

@@ -73,3 +73,10 @@ build --verbose_failures
 build --test_output=errors
 build --experimental_ui_max_stdouterr_bytes=-1
 EOF
+
+if [[ $ppc_arch == "p10" ]];
+then
+cat >> $BAZEL_RC_DIR/tf_io.bazelrc << EOF
+build --copt="-Wno-maybe-uninitialized"
+EOF
+fi
