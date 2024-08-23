@@ -34,6 +34,7 @@ outputs:
         - {{ compiler('cxx') }}    # [ ppc_arch != "p10"]
       host:
         - git >=2.2
+        - pip {{ pip }}
         - bazel {{ bazel }}
         - setuptools {{ setuptools }}
         - python {{ python }}
